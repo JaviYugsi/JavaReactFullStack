@@ -22,7 +22,7 @@
 	</properties>
 
 	<dependencies>
-		<dependency>
+	<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-data-jdbc</artifactId>
 		</dependency>
@@ -58,20 +58,18 @@
 			<version>3.12.2</version>
 			<scope>test</scope>
 		</dependency>
+
 		<dependency>
 			<groupId>junit</groupId>
 			<artifactId>junit</artifactId>
 			<scope>test</scope>
 		</dependency>
 		<dependency>
-			<groupId>junit</groupId>
-			<artifactId>junit</artifactId>
-			<scope>test</scope>
+			<groupId>com.github.eirslett</groupId>
+			<artifactId>frontend-maven-plugin</artifactId>
+			<version>${frontend-maven-plugin.version}</version>
 		</dependency>
-
-
 	</dependencies>
-
 	<profiles>
 		<profile>
 			<id>demo</id>
@@ -81,7 +79,7 @@
 					<plugin>
 						<groupId>com.github.eirslett</groupId>
 						<artifactId>frontend-maven-plugin</artifactId>
-						<version>1.6</version>
+						<version>${frontend-maven-plugin.version}</version>
 						<configuration>
 							<workingDirectory>src/js</workingDirectory>
 						</configuration>
@@ -150,6 +148,13 @@
 					</plugin>
 				</plugins>
 			</build>
+
+			<properties>
+				<spring.profiles.active>
+					demo
+				</spring.profiles.active>
+			</properties>
+
 		</profile>
 	</profiles>
 

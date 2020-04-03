@@ -1,0 +1,13 @@
+spring:
+  profiles:
+    active: @spring.profiles.active@
+
+server:
+  port: 5000
+
+app:
+  datasource:
+    jdbc-url: jdbc:postgresql://database-fullstackspringboot.cxyju67zalmy.eu-west-2.rds.amazonaws.com:5432/database-fullstackspringboot
+    username: adminfullstack
+    password: masterkey
+    pool-size: 30

@@ -8,9 +8,9 @@ import javax.validation.Valid;
 import java.util.List;
 import java.util.UUID;
 
-//reactFSpostgres
+//docker start reactFSpostgres
 @RestController
-@RequestMapping("students")
+@RequestMapping("api/students")
 public class StudentController {
 
     private final StudentService studentService;
